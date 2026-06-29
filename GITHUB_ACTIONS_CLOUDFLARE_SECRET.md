@@ -11,6 +11,8 @@ Name: CLOUDFLARE_API_TOKEN
 Value: Cloudflare에서 발급한 API Token
 ```
 
+이 Secret이 없으면 GitHub Actions는 Cloudflare 배포를 건너뛰도록 설정되어 있다. 실패 메일을 막기 위한 안전장치이며, 실제 자동 배포를 사용하려면 반드시 Secret을 추가해야 한다.
+
 저장소 Secret 설정 위치:
 
 ```text
@@ -51,3 +53,15 @@ Cloudflare Pages 프로젝트:
 ```text
 geonbocalc
 ```
+
+## 실패 메일이 온 경우
+
+메일 제목이 `Cloudflare Pages 워크플로 실행에 배포`이고 실패 작업이 `Cloudflare Pages에 배포 / 배포`라면 대부분 아래 중 하나다.
+
+```text
+1. GitHub Secret CLOUDFLARE_API_TOKEN이 없음
+2. API Token 권한에 Cloudflare Pages Edit이 없음
+3. Account ID 또는 project-name이 다른 값으로 들어감
+```
+
+현재 워크플로우는 Secret이 없으면 실패하지 않고 배포를 건너뛰게 되어 있다. 자동 배포까지 완료하려면 `CLOUDFLARE_API_TOKEN`을 추가한 뒤 GitHub Actions에서 `Run workflow`를 눌러 다시 실행한다.
