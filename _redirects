@@ -1,0 +1,3 @@
+﻿# Cloudflare Pages _redirects is kept for path-level redirects.
+# Host redirects such as www.geonbocalc.com -> geonbocalc.com must be configured
+# in Cloudflare Bulk Redirects. See DEPLOYMENT.md.

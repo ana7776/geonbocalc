@@ -1,0 +1,170 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>공공데이터 출처 | 건보계산기</title>
+  <meta name="description" content="건보계산기가 참고하는 국민건강보험공단 및 공공데이터포털 데이터 출처와 활용 범위를 정리했습니다.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://geonbocalc.com/data-sources">
+  <link rel="stylesheet" href="./styles.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5804969457082424" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="건보계산기 홈"><span class="brand-mark">건</span><span>건보계산기</span></a>
+    <nav class="top-nav" aria-label="주요 메뉴">
+      <a href="./#calculator">계산기</a>
+      <a href="./guides/">퇴사 가이드</a>
+      <a href="./local-subscriber/">지역가입자</a>
+      <a href="./voluntary-continuation/">임의계속</a>
+      <a href="./dependent/">피부양자</a>
+      <a href="./income/">소득별</a>
+      <a href="./cases/">사례</a>
+      <a href="./checklists/">체크리스트</a>
+      <a href="./data-sources">공공데이터</a>
+      <a href="./contact">문의</a>
+    </nav>
+  </header>
+
+  <main class="page data-page">
+    <p class="eyebrow">Public Data</p>
+    <h1>공공데이터 출처</h1>
+          <div class="content-meta" aria-label="글 정보">
+            <span>작성: 건보계산기 편집팀</span>
+            <span>검토일: 2026-06-24</span>
+            <span>분류: 퇴사 후 건강보험 참고 정보</span>
+          </div>
+    <p>건보계산기는 퇴사 후 건강보험료를 이해하기 위한 민간 참고 도구입니다. 계산 로직과 설명은 국민건강보험공단, 보건복지부, 공공데이터포털에 공개된 기준과 통계 자료를 바탕으로 정리하되, 실제 고지액이나 자격 판정은 국민건강보험공단의 최종 심사를 우선합니다.</p>
+
+    <section class="article-summary">
+      <strong>현재 반영 상태</strong>
+      <p>2026년 건강보험료율 7.19%, 장기요양보험료 건강보험료 대비 13.14%, 지역가입자 재산 점수표와 최저보험료 기준을 계산기에 반영했습니다. 공공데이터 API 인증키는 브라우저에 노출하지 않도록 서버 쪽 연동으로만 확장할 예정입니다.</p>
+    </section>
+
+    <section class="trust-box">
+      <h2>정보 이용 전 확인하세요</h2>
+      <p>이 페이지는 퇴사자가 건강보험 선택지를 이해할 수 있도록 국민건강보험공단, 보건복지부, 공공데이터포털의 공개 안내를 바탕으로 정리한 민간 참고 자료입니다. 실제 보험료와 자격 판단은 개인별 자료 반영 시점과 공단 심사 결과에 따라 달라질 수 있습니다.</p>
+    </section>
+
+    <section class="data-source-list" aria-label="공공데이터 목록">
+      <article>
+        <h2>보건복지부 2026년 건강보험료율 결정</h2>
+        <p>2026년 직장가입자와 지역가입자 건강보험료율 7.19% 결정 내용을 확인하는 보도자료입니다.</p>
+        <dl>
+          <div><dt>제공기관</dt><dd>보건복지부</dd></div>
+          <div><dt>제공형태</dt><dd>공식 보도자료</dd></div>
+          <div><dt>사이트 활용</dt><dd>직장가입자 보험료율과 기본 계산 상수 검토</dd></div>
+        </dl>
+        <a href="https://www.mohw.go.kr/board.es?act=view&bid=0027&list_no=1487279&mid=a10503010100&nPage=1&tag=" rel="nofollow">보건복지부에서 보기</a>
+      </article>
+
+      <article>
+        <h2>보건복지부 2026년도 장기요양보험료율</h2>
+        <p>2026년도 장기요양보험료가 건강보험료에 13.14%를 곱해 납부된다는 기준을 확인하는 보도자료입니다.</p>
+        <dl>
+          <div><dt>제공기관</dt><dd>보건복지부</dd></div>
+          <div><dt>제공형태</dt><dd>공식 보도자료</dd></div>
+          <div><dt>사이트 활용</dt><dd>장기요양보험료 계산과 결과 설명 문구 검토</dd></div>
+        </dl>
+        <a href="https://www.mohw.go.kr/board.es?act=view&bid=0027&list_no=1487817&mid=a10503010100&nPage=1&tag=" rel="nofollow">보건복지부에서 보기</a>
+      </article>
+
+      <article>
+        <h2>국민건강보험공단 4대 보험료 모의계산</h2>
+        <p>사용자가 본인 자료로 건강보험료를 다시 대조할 수 있는 공단의 공식 모의계산 페이지입니다.</p>
+        <dl>
+          <div><dt>제공기관</dt><dd>국민건강보험공단</dd></div>
+          <div><dt>제공형태</dt><dd>공식 웹 계산기</dd></div>
+          <div><dt>사이트 활용</dt><dd>건보계산기 결과와 공단 공식 계산 결과를 비교하는 안내</dd></div>
+        </dl>
+        <a href="https://www.nhis.or.kr/nhis/minwon/initCtrbCalcView.do" rel="nofollow">국민건강보험공단에서 보기</a>
+      </article>
+
+      <article>
+        <h2>국민건강보험공단_건강보험 산정기준_개편</h2>
+        <p>지역가입자의 소득, 재산, 임차료 등 보험료 산정에 쓰이는 기준 데이터를 연도별·기준기간별로 정리한 공공데이터입니다.</p>
+        <dl>
+          <div><dt>제공기관</dt><dd>국민건강보험공단</dd></div>
+          <div><dt>분류</dt><dd>보건 - 건강보험</dd></div>
+          <div><dt>제공형태</dt><dd>CSV, JSON, XML</dd></div>
+          <div><dt>사이트 활용</dt><dd>지역가입자 계산 기준 검토와 고지 전 안내 문구 보강</dd></div>
+        </dl>
+        <a href="https://www.data.go.kr/data/15122261/fileData.do" rel="nofollow">공공데이터포털에서 보기</a>
+      </article>
+
+      <article>
+        <h2>국민건강보험공단_건강보험 보험료 현황</h2>
+        <p>건강보험 월별 시도별 보험료 현황을 제공하는 통계 데이터입니다. 개인별 보험료 산정용이 아니라 지역·직역별 통계 안내에 적합합니다.</p>
+        <dl>
+          <div><dt>제공기관</dt><dd>국민건강보험공단</dd></div>
+          <div><dt>분류</dt><dd>사회복지 - 사회복지일반</dd></div>
+          <div><dt>제공형태</dt><dd>CSV, JSON, XML</dd></div>
+          <div><dt>사이트 활용</dt><dd>콘텐츠 글의 통계 설명과 공신력 보강</dd></div>
+        </dl>
+        <a href="https://www.data.go.kr/data/3034284/fileData.do" rel="nofollow">공공데이터포털에서 보기</a>
+      </article>
+
+      <article>
+        <h2>국민건강보험공단 지역가입자 부과체계</h2>
+        <p>지역가입자 보험료가 소득과 재산 자료를 바탕으로 산정된다는 점을 확인하기 위한 공식 안내 자료입니다.</p>
+        <dl>
+          <div><dt>제공기관</dt><dd>국민건강보험공단</dd></div>
+          <div><dt>제공형태</dt><dd>공식 웹 안내</dd></div>
+          <div><dt>사이트 활용</dt><dd>계산 결과의 한계와 사용자가 확인해야 할 자료 안내</dd></div>
+        </dl>
+        <a href="https://www.nhis.or.kr/static/html/wbma/b/wbmab0101.html" rel="nofollow">국민건강보험공단에서 보기</a>
+      </article>
+
+      <article>
+        <h2>찾기쉬운 생활법령정보 임의계속가입 안내</h2>
+        <p>퇴직 후 임의계속가입의 보험료 부담 방식, 신청과 탈퇴, 관련 서류 흐름을 확인하는 법령 해설 자료입니다.</p>
+        <dl>
+          <div><dt>제공기관</dt><dd>법제처 찾기쉬운 생활법령정보</dd></div>
+          <div><dt>제공형태</dt><dd>법령 해설 웹 안내</dd></div>
+          <div><dt>사이트 활용</dt><dd>임의계속가입 신청 전 확인사항과 체크리스트 보강</dd></div>
+        </dl>
+        <a href="https://easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=1&cnpClsNo=3&csmSeq=1063&popMenu=ov" rel="nofollow">찾기쉬운 생활법령정보에서 보기</a>
+      </article>
+
+      <article>
+        <h2>국민건강보험법 시행규칙 제2조</h2>
+        <p>피부양자 자격의 인정기준이 부양요건과 소득·재산요건을 함께 충족해야 한다는 법령 근거입니다.</p>
+        <dl>
+          <div><dt>제공기관</dt><dd>국가법령정보센터</dd></div>
+          <div><dt>제공형태</dt><dd>법령 원문</dd></div>
+          <div><dt>사이트 활용</dt><dd>피부양자 자격 관련 글의 법령 근거 보강</dd></div>
+        </dl>
+        <a href="https://www.law.go.kr/LSW/lumLsLinkPop.do?chrClsCd=010202&lspttninfSeq=69276" rel="nofollow">국가법령정보센터에서 보기</a>
+      </article>
+    </section>
+
+    <section class="note-box">
+      <strong>API 연동 메모</strong>
+      <p>공공데이터포털 활용신청 후 받은 인증키는 정적 HTML이나 JavaScript에 직접 넣지 않습니다. Cloudflare Pages Functions 또는 별도 서버에서 인증키를 환경변수로 보관하고, 필요한 데이터만 캐시해 계산기 화면에 전달하는 방식으로 붙이는 것이 안전합니다.</p>
+    </section>
+
+    <h2>계산 결과를 볼 때의 주의점</h2>
+    <ul>
+      <li>공공데이터의 통계 값은 개인별 고지액을 대신하지 않습니다.</li>
+      <li>개인별 보험료는 소득·재산 자료 반영 시점, 세대 구성, 감면, 정산 여부에 따라 달라질 수 있습니다.</li>
+      <li>퇴사 후 신청 가능 기간과 자격 판단은 국민건강보험공단 상담 또는 공식 안내를 통해 확인해야 합니다.</li>
+    </ul>
+    <h2>업데이트와 정정 방식</h2>
+    <p>건강보험료율, 장기요양보험료율, 지역가입자 재산 점수표, 피부양자 소득 기준처럼 계산 결과에 영향을 주는 항목은 공식 자료 변경 여부를 우선 확인합니다. 기준이 바뀌면 계산기 상수, 관련 설명 글, 사례 글의 주의 문구를 함께 점검합니다.</p>
+    <p>공공기관 링크가 바뀌거나 자료명이 변경된 경우에는 같은 출처의 최신 안내 페이지로 교체합니다. 사용자가 오류를 제보한 경우에도 단일 문장만 고치지 않고, 같은 기준을 인용한 다른 페이지가 있는지 함께 확인합니다.</p>
+  </main>
+
+  <footer class="site-footer">
+    <strong>건보계산기</strong>
+    <p>퇴사 후 건강보험료 비교를 돕는 민간 참고 사이트입니다. 실제 자격과 고지는 국민건강보험공단 기준을 확인하세요.</p>
+    <nav aria-label="푸터 메뉴">
+      <a href="./about">소개</a>
+      <a href="./data-sources">공공데이터 출처</a>
+      <a href="./privacy">개인정보처리방침</a>
+      <a href="./disclaimer">면책 안내</a>
+      <a href="./contact">문의</a>
+    </nav>
+  </footer>
+</body>
+</html>

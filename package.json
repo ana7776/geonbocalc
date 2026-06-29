@@ -1,0 +1,21 @@
+{
+  "name": "geonbocalc-static-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "images:r2": "node scripts/r2-image-pipeline.mjs",
+    "deploy:pages": "wrangler pages deploy . --project-name geonbocalc --branch main --commit-dirty=true"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.600.0",
+    "cheerio": "^1.0.0",
+    "sharp": "^0.33.4"
+  },
+  "devDependencies": {
+    "wrangler": "^3.60.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
