@@ -1,4 +1,4 @@
-﻿# geonbocalc.com 배포 체크리스트
+# geonbocalc.com 배포 체크리스트
 
 ## 현재 배포 상태
 

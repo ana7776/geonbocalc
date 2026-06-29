@@ -9,11 +9,11 @@
 
 /robots.txt
   Content-Type: text/plain; charset=utf-8
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=300
 
 /ads.txt
   Content-Type: text/plain; charset=utf-8
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, max-age=300
 
 /styles.css
   Cache-Control: public, max-age=604800
