@@ -1,3 +1,31 @@
 # Cloudflare Pages _redirects is kept for path-level redirects.
 # Host redirects such as www.geonbocalc.com -> geonbocalc.com must be configured
 # in Cloudflare Bulk Redirects. See DEPLOYMENT.md.
+
+/index.html / 301
+/about.html /about 301
+/contact.html /contact 301
+/privacy.html /privacy 301
+/disclaimer.html /disclaimer 301
+/data-sources.html /data-sources 301
+/retiree-guide.html /retiree-guide 301
+/four-insurance-after-resignation.html /four-insurance-after-resignation 301
+/local-subscriber-health-insurance.html /local-subscriber-health-insurance 301
+/voluntary-continuation.html /voluntary-continuation 301
+/dependent-eligibility.html /dependent-eligibility 301
+/financial-income.html /financial-income 301
+/resignation-health-insurance-checklist.html /resignation-health-insurance-checklist 301
+/guides/index.html /guides/ 301
+/local-subscriber/index.html /local-subscriber/ 301
+/voluntary-continuation/index.html /voluntary-continuation/ 301
+/dependent/index.html /dependent/ 301
+/income/index.html /income/ 301
+/cases/index.html /cases/ 301
+/checklists/index.html /checklists/ 301
+/guides/:slug.html /guides/:slug 301
+/local-subscriber/:slug.html /local-subscriber/:slug 301
+/voluntary-continuation/:slug.html /voluntary-continuation/:slug 301
+/dependent/:slug.html /dependent/:slug 301
+/income/:slug.html /income/:slug 301
+/cases/:slug.html /cases/:slug 301
+/checklists/:slug.html /checklists/:slug 301
