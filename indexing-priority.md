@@ -1,152 +1,200 @@
 # 색인 요청 URL 우선순위
 
-기준일: 2026-08-16  
-대표 도메인: https://geonbocalc.com  
+기준일: 2026-08-16
+대표 도메인: https://geonbocalc.com
 사이트맵: https://geonbocalc.com/sitemap.xml
 
-## 바로 제출할 주소
+이 문서의 순서는 감이 아니라 2026-08-16 Search Console 데이터(지난 3개월)를 기준으로 정했습니다.
+색인 35건 / 미색인 23건(발견됨 18, 크롤링됨 4, 리디렉션 1), 총 노출 130회, 클릭 2회 상태입니다.
 
-`naver-index-urls-today.txt`에는 네이버 서치어드바이저에 오늘 수집 요청하기 좋은 상위 25개 URL만 담았습니다.
+## 순서를 정한 기준
+
+1. **이번 수정으로 URL이 바뀌거나 새로 생긴 주소** — 재수집하지 않으면 변경이 반영되지 않습니다.
+2. **내부 링크가 처음 연결된 글** — 그동안 크롤러가 도달할 경로 자체가 없었습니다.
+3. **3개월간 노출 0인 글** — 색인되지 않았을 가능성이 높은 구간입니다. 58개 중 37개가 여기 해당합니다.
+4. **이미 노출이 나오는 페이지** — 색인은 되어 있으므로 마지막입니다.
+
+노출 0 구간은 카테고리별로 뭉쳐 있습니다. `guides/` 허브와 그 아래 글 6개, `cases/` 5개,
+`checklists/` 6개가 전부 노출 0입니다. "발견됨 - 현재 색인이 생성되지 않음 18건"과 거의 일치하므로,
+이 세 카테고리를 허브부터 순서대로 밀어 넣는 것이 이번 색인 요청의 핵심입니다.
+
+## 1일차: 이번 변경분 (11건)
+
+`naver-index-urls-today.txt`에 그대로 담겨 있습니다. 가장 먼저 제출하세요.
 
 ```text
+https://geonbocalc.com/voluntary-continuation-premium
+https://geonbocalc.com/editorial-policy
+https://geonbocalc.com/guides/
+https://geonbocalc.com/dependent/
+https://geonbocalc.com/local-subscriber/
+https://geonbocalc.com/guides/health-insurance-after-reemployment
+https://geonbocalc.com/dependent/dependent-application-timing-after-resignation
+https://geonbocalc.com/local-subscriber/income-decrease-adjustment-after-resignation
 https://geonbocalc.com/
 https://geonbocalc.com/guides/dependent-premium-relief-ends-2026
-https://geonbocalc.com/four-insurance-after-resignation
-https://geonbocalc.com/retiree-guide
-https://geonbocalc.com/local-subscriber-health-insurance
-https://geonbocalc.com/voluntary-continuation-premium
-https://geonbocalc.com/dependent-eligibility
 https://geonbocalc.com/financial-income
-https://geonbocalc.com/resignation-health-insurance-checklist
-https://geonbocalc.com/guides/
-https://geonbocalc.com/local-subscriber/
-https://geonbocalc.com/voluntary-continuation/
-https://geonbocalc.com/dependent/
-https://geonbocalc.com/income/
-https://geonbocalc.com/checklists/
-https://geonbocalc.com/cases/
+```
+
+- `voluntary-continuation-premium`은 URL 충돌을 풀면서 새로 생긴 주소입니다. 구 주소 `/voluntary-continuation`은 카테고리 허브로 301되므로 따로 제출하지 않습니다.
+- `editorial-policy`는 신규 페이지입니다.
+- 허브 3곳은 목록에 글이 추가되어 내용이 바뀌었습니다.
+- 그다음 3건은 이번에 내부 링크가 처음 연결된 글입니다. 특히 `health-insurance-after-reemployment`는 노출 22회로 사이트 3위인데 링크가 0건이었습니다.
+
+## 2일차: guides 카테고리 (6건)
+
+허브를 1일차에 넣었으므로 이어서 본문 글을 넣습니다. 전부 노출 0입니다.
+
+```text
 https://geonbocalc.com/guides/why-health-premium-rises-after-resignation
 https://geonbocalc.com/guides/when-local-subscriber-starts-after-resignation
 https://geonbocalc.com/guides/unemployed-health-insurance-check-order
 https://geonbocalc.com/guides/dependent-registration-after-resignation
-https://geonbocalc.com/dependent/dependent-application-timing-after-resignation
-https://geonbocalc.com/local-subscriber/income-decrease-adjustment-after-resignation
-https://geonbocalc.com/guides/health-insurance-after-reemployment
 https://geonbocalc.com/guides/questions-before-calling-nhis
-https://geonbocalc.com/local-subscriber/income-used-for-local-health-premium
+https://geonbocalc.com/retiree-guide
 ```
 
-## 1순위: 핵심 페이지
+## 3일차: 지역가입자와 피부양자 (10건)
 
-1. https://geonbocalc.com/
-2. https://geonbocalc.com/four-insurance-after-resignation
-3. https://geonbocalc.com/retiree-guide
-4. https://geonbocalc.com/local-subscriber-health-insurance
-5. https://geonbocalc.com/voluntary-continuation-premium
-6. https://geonbocalc.com/dependent-eligibility
-7. https://geonbocalc.com/financial-income
-8. https://geonbocalc.com/resignation-health-insurance-checklist
+```text
+https://geonbocalc.com/local-subscriber/income-used-for-local-health-premium
+https://geonbocalc.com/local-subscriber/local-premium-without-income
+https://geonbocalc.com/local-subscriber/rent-deposit-local-health-premium
+https://geonbocalc.com/local-subscriber/property-tax-base-health-premium
+https://geonbocalc.com/local-subscriber/housing-debt-deduction-health-premium
+https://geonbocalc.com/dependent/parents-dependent-eligibility
+https://geonbocalc.com/dependent/business-registration-dependent-risk
+https://geonbocalc.com/dependent-eligibility
+https://geonbocalc.com/local-subscriber-health-insurance
+https://geonbocalc.com/four-insurance-after-resignation
+```
 
-## 2순위: 카테고리 허브
+## 4일차: 임의계속과 소득별 (7건)
 
-1. https://geonbocalc.com/guides/
-2. https://geonbocalc.com/local-subscriber/
-3. https://geonbocalc.com/voluntary-continuation/
-4. https://geonbocalc.com/dependent/
-5. https://geonbocalc.com/income/
-6. https://geonbocalc.com/checklists/
-7. https://geonbocalc.com/cases/
+```text
+https://geonbocalc.com/voluntary-continuation/
+https://geonbocalc.com/voluntary-continuation/before-voluntary-continuation-application
+https://geonbocalc.com/voluntary-continuation/when-voluntary-continuation-is-better
+https://geonbocalc.com/voluntary-continuation/when-local-can-be-better-than-continuation
+https://geonbocalc.com/voluntary-continuation/paystub-items-for-voluntary-continuation
+https://geonbocalc.com/income/freelancer-health-premium-after-resignation
+https://geonbocalc.com/income/severance-pay-health-insurance
+```
 
-## 3순위: 퇴사 직후 검색 의도가 강한 글
+## 5일차: 체크리스트 (8건)
 
-1. https://geonbocalc.com/guides/dependent-premium-relief-ends-2026
-2. https://geonbocalc.com/guides/why-health-premium-rises-after-resignation
-3. https://geonbocalc.com/guides/when-local-subscriber-starts-after-resignation
-4. https://geonbocalc.com/guides/unemployed-health-insurance-check-order
-5. https://geonbocalc.com/guides/dependent-registration-after-resignation
-6. https://geonbocalc.com/dependent/dependent-application-timing-after-resignation
-7. https://geonbocalc.com/local-subscriber/income-decrease-adjustment-after-resignation
-8. https://geonbocalc.com/guides/health-insurance-after-reemployment
-9. https://geonbocalc.com/guides/questions-before-calling-nhis
+허브를 포함해 `checklists/` 아래 7건이 전부 노출 0입니다. 루트의 체크리스트 페이지를 함께 넣습니다.
 
-## 4순위: 지역가입자 세부 글
+```text
+https://geonbocalc.com/checklists/
+https://geonbocalc.com/checklists/before-resignation-health-checklist
+https://geonbocalc.com/checklists/dependent-documents-checklist
+https://geonbocalc.com/checklists/voluntary-continuation-checklist
+https://geonbocalc.com/checklists/local-subscriber-documents-checklist
+https://geonbocalc.com/checklists/30-day-after-resignation-checklist
+https://geonbocalc.com/checklists/90-day-after-resignation-checklist
+https://geonbocalc.com/resignation-health-insurance-checklist
+```
 
-1. https://geonbocalc.com/local-subscriber/income-used-for-local-health-premium
-2. https://geonbocalc.com/local-subscriber/local-premium-without-income
-3. https://geonbocalc.com/local-subscriber/rent-deposit-local-health-premium
-4. https://geonbocalc.com/local-subscriber/property-tax-base-health-premium
-5. https://geonbocalc.com/local-subscriber/housing-debt-deduction-health-premium
+## 6일차: 사례 (6건)
 
-## 5순위: 임의계속가입 세부 글
+허브 포함 6건 전부 노출 0입니다.
 
-1. https://geonbocalc.com/voluntary-continuation/before-voluntary-continuation-application
-2. https://geonbocalc.com/voluntary-continuation/when-voluntary-continuation-is-better
-3. https://geonbocalc.com/voluntary-continuation/when-local-can-be-better-than-continuation
-4. https://geonbocalc.com/voluntary-continuation/paystub-items-for-voluntary-continuation
+```text
+https://geonbocalc.com/cases/
+https://geonbocalc.com/cases/case-120k-before-after
+https://geonbocalc.com/cases/case-spouse-dependent-before-after
+https://geonbocalc.com/cases/case-rent-deposit-unemployed
+https://geonbocalc.com/cases/case-freelancer-after-resignation
+https://geonbocalc.com/cases/case-voluntary-continuation-better
+```
 
-## 6순위: 피부양자 세부 글
+## 7일차: 이미 노출이 있는 페이지와 보조 페이지 (10건)
 
-1. https://geonbocalc.com/dependent/spouse-dependent-eligibility-check
-2. https://geonbocalc.com/dependent/parents-dependent-eligibility
-3. https://geonbocalc.com/dependent/financial-income-dependent-risk
-4. https://geonbocalc.com/dependent/business-registration-dependent-risk
+색인이 되어 있을 가능성이 높으므로 마지막입니다.
 
-## 7순위: 소득별 세부 글
+```text
+https://geonbocalc.com/income/
+https://geonbocalc.com/income/financial-income-over-10m-health-insurance
+https://geonbocalc.com/income/pension-income-health-insurance
+https://geonbocalc.com/dependent/spouse-dependent-eligibility-check
+https://geonbocalc.com/dependent/financial-income-dependent-risk
+https://geonbocalc.com/data-sources
+https://geonbocalc.com/about
+https://geonbocalc.com/contact
+https://geonbocalc.com/privacy
+https://geonbocalc.com/disclaimer
+```
 
-1. https://geonbocalc.com/income/financial-income-over-10m-health-insurance
-2. https://geonbocalc.com/income/freelancer-health-premium-after-resignation
-3. https://geonbocalc.com/income/pension-income-health-insurance
-4. https://geonbocalc.com/income/severance-pay-health-insurance
+## 참고: 노출이 나오고 있는 페이지 (2026-08-16 기준)
 
-## 8순위: 체크리스트
+색인 요청보다 콘텐츠 보강이 필요한 구간입니다.
 
-1. https://geonbocalc.com/checklists/before-resignation-health-checklist
-2. https://geonbocalc.com/checklists/dependent-documents-checklist
-3. https://geonbocalc.com/checklists/voluntary-continuation-checklist
-4. https://geonbocalc.com/checklists/local-subscriber-documents-checklist
-5. https://geonbocalc.com/checklists/30-day-after-resignation-checklist
-6. https://geonbocalc.com/checklists/90-day-after-resignation-checklist
+| URL | 노출 | 평균 순위 | 메모 |
+| --- | --- | --- | --- |
+| /financial-income | 38 | 8.4 | 노출 1위인데 CTR 0%. 1페이지권이므로 제목·설명과 본문 깊이 점검 대상 |
+| / | 26 | 17.5 | 계산기 의도 검색어에서 순위가 낮음 |
+| /guides/health-insurance-after-reemployment | 22 | 19.6 | 이번에 링크가 처음 연결됨 |
+| /voluntary-continuation/ | 14 | 5.7 | 사이트 최고 순위, 클릭 1건 |
+| /income/ | 10 | 12.5 | |
+| /retiree-guide | 8 | 33.1 | |
+| /dependent/ | 6 | 10.5 | |
+| /local-subscriber/ | 5 | 4.0 | |
+| /data-sources | 5 | 6.0 | |
+| /resignation-health-insurance-checklist | 5 | 8.6 | |
+| /dependent-eligibility | 5 | 10.4 | |
+| /voluntary-continuation-premium | 5 | 51.0 | 구 주소 기준. URL 충돌 해소 후 재측정 필요 |
+| /local-subscriber-health-insurance | 4 | 11.3 | 클릭 1건 |
+| /income/financial-income-over-10m-health-insurance | 3 | 2.0 | 사이트 최고 순위 |
+| /income/pension-income-health-insurance | 3 | 4.0 | |
+| /dependent/spouse-dependent-eligibility-check | 3 | 8.0 | |
+| /dependent/financial-income-dependent-risk | 2 | 8.0 | |
+| /cases/ | 1 | 3.0 | 허브만 노출, 하위 글은 전부 0 |
+| /checklists/ | 1 | 5.0 | 허브만 노출, 하위 글은 전부 0 |
+| /four-insurance-after-resignation | 1 | 94.0 | |
+| /voluntary-continuation/paystub-items-for-voluntary-continuation | 1 | 189.0 | |
 
-## 9순위: 사례 글
+## 검색어 현황 (2026-08-16 기준)
 
-1. https://geonbocalc.com/cases/case-120k-before-after
-2. https://geonbocalc.com/cases/case-spouse-dependent-before-after
-3. https://geonbocalc.com/cases/case-voluntary-continuation-better
-4. https://geonbocalc.com/cases/case-rent-deposit-unemployed
-5. https://geonbocalc.com/cases/case-freelancer-after-resignation
+| 검색어 | 노출 | 평균 순위 |
+| --- | --- | --- |
+| 금융소득 피부양자 | 3 | 9.7 |
+| 퇴사 후 건강보험 | 2 | 60.5 |
+| 임의계속가입자 보험료 | 1 | 15.0 |
+| 퇴사 후 건강보험 처리 | 1 | 49.0 |
+| 지역 가입자 건강 보험료 계산기 | 1 | 64.0 |
+| 지역건강보험료 계산기 | 1 | 67.0 |
+| 퇴직 후 건강보험료 계산 | 1 | 79.0 |
 
-## 10순위: 보조 페이지
-
-1. https://geonbocalc.com/data-sources
-2. https://geonbocalc.com/about
-3. https://geonbocalc.com/editorial-policy
-4. https://geonbocalc.com/contact
-5. https://geonbocalc.com/privacy
-6. https://geonbocalc.com/disclaimer
+- "금융소득 피부양자"가 평균 9.7위로 가장 높습니다. 다만 이 주제를 `financial-income`,
+  `dependent/financial-income-dependent-risk`, `income/financial-income-over-10m-health-insurance`
+  셋이 나눠 갖고 있어 서로 잠식하지 않는지 확인이 필요합니다.
+- 계산기 의도 검색어 3개가 모두 60~79위입니다. 사이트의 주력 기능인데 이를 설명하는 페이지가
+  홈 외에 없다는 점이 원인일 수 있습니다.
 
 ## 2026-08-16 색인 점검 기록
 
-Search Console 기준 색인 35건, 미색인 23건(발견됨 18, 크롤링됨 4, 리디렉션 1)이었고, 원인을 아래와 같이 정리해 수정했습니다.
+Search Console 미색인 23건의 구조적 원인을 아래와 같이 정리해 수정했습니다.
 
-- **URL 충돌 1건**: `voluntary-continuation.html`과 `voluntary-continuation/index.html`이 `/voluntary-continuation` 하나를 두고 겹쳐, 둘 중 하나가 항상 리디렉션되거나 도달 불가 상태였습니다. 루트 글을 `/voluntary-continuation-premium`으로 분리하고 카테고리 허브는 `/voluntary-continuation/`로 고정했습니다.
-- **고아 페이지 4건**: 아래 글이 사이트 어디에서도 링크되지 않아 크롤러가 도달할 경로가 없었습니다. 각 카테고리 허브 목록에 추가하고 관련 글에서 상호 링크를 연결했습니다.
+- **URL 충돌 1건**: `voluntary-continuation.html`과 `voluntary-continuation/index.html`이
+  `/voluntary-continuation` 하나를 두고 겹쳐, 둘 중 하나가 항상 리디렉션되거나 도달 불가
+  상태였습니다. 루트 글을 `/voluntary-continuation-premium`으로 분리했습니다.
+- **고아 페이지 4건**: 아래 글이 사이트 어디에서도 링크되지 않아 크롤러가 도달할 경로가
+  없었습니다. 각 카테고리 허브 목록에 추가하고 관련 글에서 상호 링크를 연결했습니다.
   - `guides/health-insurance-after-reemployment` (노출 22회로 사이트 3위였는데 링크 0건)
   - `dependent/dependent-application-timing-after-resignation`
   - `local-subscriber/income-decrease-adjustment-after-resignation`
-  - `voluntary-continuation`(위 충돌 건)
-- **lastmod 고정**: 전체 URL이 `2026-06-24`로 묶여 있어 재크롤링 신호가 없었습니다. 본문이 실제로 바뀐 URL만 갱신하는 방식으로 정리했습니다.
-
-다음 점검 때 확인할 것
-
-- 미색인 23건이 줄었는지, 특히 "발견됨 - 현재 색인이 생성되지 않음" 18건의 추이
-- `financial-income`은 노출 38회로 최다인데 CTR 0%입니다. 평균 게재순위가 8위대이므로 순위보다 제목·설명과 본문 깊이를 점검할 구간입니다.
-- 검색어 중 "금융소득 피부양자"가 평균 9.7위로 가장 높습니다. 이 주제를 다루는 글이 `financial-income`, `dependent/financial-income-dependent-risk`, `income/financial-income-over-10m-health-insurance` 셋으로 나뉘어 있어 서로 잠식하지 않는지 확인이 필요합니다.
-- "지역건강보험료 계산기", "퇴직 후 건강보험료 계산" 등 계산기 의도 검색어는 60~79위로 낮습니다. 계산기 자체를 설명하는 페이지가 홈 외에 없다는 점이 원인일 수 있습니다.
+  - `voluntary-continuation` (위 충돌 건)
+- **lastmod 고정**: 전체 URL이 `2026-06-24`로 묶여 있어 재크롤링 신호가 없었습니다.
+  본문이 실제로 바뀐 URL만 갱신하는 방식으로 정리했습니다.
 
 ## 제출 메모
 
-- Google Search Console에는 먼저 `sitemap.xml`을 제출하고, 1순위 URL부터 URL 검사에서 색인 요청합니다.
-- 네이버 서치어드바이저에는 사이트 등록, 소유 확인, `sitemap.xml` 제출을 먼저 진행합니다.
-- 수동 수집 요청은 `naver-index-urls-today.txt`의 주소를 위에서부터 순서대로 넣으면 됩니다.
-- 전체 제출 후보는 `index-urls-all.txt`에 URL만 한 줄씩 정리했습니다.
+- Google Search Console에는 먼저 `sitemap.xml`을 다시 제출하고, "리디렉션이 포함된 페이지"
+  항목의 유효성 검사를 다시 시작한 뒤, 위 순서대로 URL 검사에서 색인을 요청합니다.
+- 네이버 서치어드바이저 수동 수집 요청은 `naver-index-urls-today.txt`의 주소를 위에서부터
+  순서대로 넣으면 됩니다. 하루 요청 한도가 있으므로 일차별로 나눠 진행합니다.
+- 전체 제출 후보 58개는 `index-urls-all.txt`에 URL만 한 줄씩 정리했습니다.
 - `404.html`, `googlefa76c3e8fcf3b216.html`, `ads.txt`는 일반 색인 요청 대상에서 제외합니다.
+- 다음 점검 때는 미색인 23건이 줄었는지, 특히 "발견됨 - 현재 색인이 생성되지 않음" 18건의
+  추이를 먼저 봅니다.
