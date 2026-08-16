@@ -1,6 +1,6 @@
 # 색인 요청 URL 우선순위
 
-기준일: 2026-06-24  
+기준일: 2026-08-16  
 대표 도메인: https://geonbocalc.com  
 사이트맵: https://geonbocalc.com/sitemap.xml
 
@@ -10,6 +10,7 @@
 
 ```text
 https://geonbocalc.com/
+https://geonbocalc.com/guides/dependent-premium-relief-ends-2026
 https://geonbocalc.com/four-insurance-after-resignation
 https://geonbocalc.com/retiree-guide
 https://geonbocalc.com/local-subscriber-health-insurance
@@ -33,7 +34,6 @@ https://geonbocalc.com/local-subscriber/income-decrease-adjustment-after-resigna
 https://geonbocalc.com/guides/health-insurance-after-reemployment
 https://geonbocalc.com/guides/questions-before-calling-nhis
 https://geonbocalc.com/local-subscriber/income-used-for-local-health-premium
-https://geonbocalc.com/local-subscriber/local-premium-without-income
 ```
 
 ## 1순위: 핵심 페이지
@@ -59,14 +59,15 @@ https://geonbocalc.com/local-subscriber/local-premium-without-income
 
 ## 3순위: 퇴사 직후 검색 의도가 강한 글
 
-1. https://geonbocalc.com/guides/why-health-premium-rises-after-resignation
-2. https://geonbocalc.com/guides/when-local-subscriber-starts-after-resignation
-3. https://geonbocalc.com/guides/unemployed-health-insurance-check-order
-4. https://geonbocalc.com/guides/dependent-registration-after-resignation
-5. https://geonbocalc.com/dependent/dependent-application-timing-after-resignation
-6. https://geonbocalc.com/local-subscriber/income-decrease-adjustment-after-resignation
-7. https://geonbocalc.com/guides/health-insurance-after-reemployment
-8. https://geonbocalc.com/guides/questions-before-calling-nhis
+1. https://geonbocalc.com/guides/dependent-premium-relief-ends-2026
+2. https://geonbocalc.com/guides/why-health-premium-rises-after-resignation
+3. https://geonbocalc.com/guides/when-local-subscriber-starts-after-resignation
+4. https://geonbocalc.com/guides/unemployed-health-insurance-check-order
+5. https://geonbocalc.com/guides/dependent-registration-after-resignation
+6. https://geonbocalc.com/dependent/dependent-application-timing-after-resignation
+7. https://geonbocalc.com/local-subscriber/income-decrease-adjustment-after-resignation
+8. https://geonbocalc.com/guides/health-insurance-after-reemployment
+9. https://geonbocalc.com/guides/questions-before-calling-nhis
 
 ## 4순위: 지역가입자 세부 글
 
@@ -118,9 +119,10 @@ https://geonbocalc.com/local-subscriber/local-premium-without-income
 
 1. https://geonbocalc.com/data-sources
 2. https://geonbocalc.com/about
-3. https://geonbocalc.com/contact
-4. https://geonbocalc.com/privacy
-5. https://geonbocalc.com/disclaimer
+3. https://geonbocalc.com/editorial-policy
+4. https://geonbocalc.com/contact
+5. https://geonbocalc.com/privacy
+6. https://geonbocalc.com/disclaimer
 
 ## 제출 메모
 
