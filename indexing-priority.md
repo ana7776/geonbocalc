@@ -188,6 +188,62 @@ Search Console 미색인 23건의 구조적 원인을 아래와 같이 정리해
 - **lastmod 고정**: 전체 URL이 `2026-06-24`로 묶여 있어 재크롤링 신호가 없었습니다.
   본문이 실제로 바뀐 URL만 갱신하는 방식으로 정리했습니다.
 
+## 2026-08-16 2차 점검: 미색인 URL 실목록 확인
+
+Search Console에서 실제 URL 목록을 확인한 결과, 1차 점검의 추정 두 가지를 정정합니다.
+
+- **"리디렉션이 포함된 페이지" 1건은 `/index.html`이었습니다.** 배포 초기에 크롤링된 구 주소이고
+  지금은 `_redirects`의 `/index.html / 301` 규칙으로 정상 리디렉션됩니다. 내부에서 이 주소를
+  링크하는 곳은 없으므로 코드로 고칠 것이 없고, 유효성 검사는 계속 "실패"로 남습니다.
+  리디렉션이 의도된 동작이기 때문입니다. 이 항목은 무시해도 됩니다.
+- **"크롤링됨 - 색인 안 됨" 4건은 고아 페이지가 아니었습니다.** 실제로는
+  `guides/dependent-premium-relief-ends-2026`, `cases/case-spouse-dependent-before-after`,
+  `guides/when-local-subscriber-starts-after-resignation`,
+  `guides/dependent-registration-after-resignation`입니다. 크롤링은 됐지만 색인이 보류된 상태입니다.
+
+1차에서 고친 URL 충돌과 고아 페이지는 그 자체로 실재한 문제였지만, 위 두 항목의 직접 원인은
+아니었습니다.
+
+### 미색인 22건의 실제 분포
+
+| 카테고리 | 미색인 / 전체 |
+| --- | --- |
+| cases | 5 / 5 |
+| local-subscriber | 4 / 6 |
+| guides | 4 / 7 |
+| voluntary-continuation | 2 / 4 |
+| checklists | 2 / 6 |
+| dependent | 1 / 5 |
+| income | 1 / 4 |
+| 루트 정책 페이지 | 3 (contact, privacy, disclaimer) |
+
+`contact`, `privacy`, `disclaimer`는 유입 링크가 20건 이상인데도 미색인입니다. 링크 문제가 아니라
+정보 가치가 낮아 색인되지 않는 페이지이므로 손대지 않습니다. 실제 대상은 콘텐츠 글 19개입니다.
+
+### 원인 검증
+
+두 가설을 데이터로 확인했습니다.
+
+- **중복 콘텐츠 가설은 기각.** 카테고리 안에서 글끼리의 텍스트 유사도가 3~7%로 낮습니다.
+  본문 길이도 평균 2,900자로 얇지 않습니다.
+- **크롤 경로 가설이 맞았습니다.** 미색인 콘텐츠 글 19개 중 18개가 "노출이 발생하는 페이지"
+  로부터 링크를 0~1건만 받고 있었습니다. 대부분 그 1건은 자기 카테고리 허브뿐이었습니다.
+  핵심 루트 페이지들이 서로만 링크하고 카테고리 글로는 내려가지 않는 구조였습니다.
+
+### 조치
+
+노출이 발생하는 페이지에서 미색인 글로 문맥 링크를 추가했습니다.
+
+- 홈에 상황별 진입 섹션을 추가해 미색인 글 6건을 직접 연결
+- `local-subscriber-health-insurance` → 지역가입자 세부 글 6건
+- `resignation-health-insurance-checklist` → 체크리스트 6건
+- `four-insurance-after-resignation` → 사례 5건
+- `retiree-guide`, `dependent-eligibility`, `financial-income`,
+  `voluntary-continuation-premium`, `guides/health-insurance-after-reemployment`에 관련 글 추가
+
+결과: 미색인 콘텐츠 글 19개가 받는 "색인된 페이지發 링크"가 최소 2건, 평균 2.7건이 되었습니다.
+조치 전에는 18건이 1건 이하였습니다.
+
 ## 제출 메모
 
 - Google Search Console에는 먼저 `sitemap.xml`을 다시 제출하고, "리디렉션이 포함된 페이지"
