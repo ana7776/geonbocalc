@@ -14,7 +14,7 @@ https://geonbocalc.com/guides/dependent-premium-relief-ends-2026
 https://geonbocalc.com/four-insurance-after-resignation
 https://geonbocalc.com/retiree-guide
 https://geonbocalc.com/local-subscriber-health-insurance
-https://geonbocalc.com/voluntary-continuation
+https://geonbocalc.com/voluntary-continuation-premium
 https://geonbocalc.com/dependent-eligibility
 https://geonbocalc.com/financial-income
 https://geonbocalc.com/resignation-health-insurance-checklist
@@ -42,7 +42,7 @@ https://geonbocalc.com/local-subscriber/income-used-for-local-health-premium
 2. https://geonbocalc.com/four-insurance-after-resignation
 3. https://geonbocalc.com/retiree-guide
 4. https://geonbocalc.com/local-subscriber-health-insurance
-5. https://geonbocalc.com/voluntary-continuation
+5. https://geonbocalc.com/voluntary-continuation-premium
 6. https://geonbocalc.com/dependent-eligibility
 7. https://geonbocalc.com/financial-income
 8. https://geonbocalc.com/resignation-health-insurance-checklist
@@ -123,6 +123,25 @@ https://geonbocalc.com/local-subscriber/income-used-for-local-health-premium
 4. https://geonbocalc.com/contact
 5. https://geonbocalc.com/privacy
 6. https://geonbocalc.com/disclaimer
+
+## 2026-08-16 색인 점검 기록
+
+Search Console 기준 색인 35건, 미색인 23건(발견됨 18, 크롤링됨 4, 리디렉션 1)이었고, 원인을 아래와 같이 정리해 수정했습니다.
+
+- **URL 충돌 1건**: `voluntary-continuation.html`과 `voluntary-continuation/index.html`이 `/voluntary-continuation` 하나를 두고 겹쳐, 둘 중 하나가 항상 리디렉션되거나 도달 불가 상태였습니다. 루트 글을 `/voluntary-continuation-premium`으로 분리하고 카테고리 허브는 `/voluntary-continuation/`로 고정했습니다.
+- **고아 페이지 4건**: 아래 글이 사이트 어디에서도 링크되지 않아 크롤러가 도달할 경로가 없었습니다. 각 카테고리 허브 목록에 추가하고 관련 글에서 상호 링크를 연결했습니다.
+  - `guides/health-insurance-after-reemployment` (노출 22회로 사이트 3위였는데 링크 0건)
+  - `dependent/dependent-application-timing-after-resignation`
+  - `local-subscriber/income-decrease-adjustment-after-resignation`
+  - `voluntary-continuation`(위 충돌 건)
+- **lastmod 고정**: 전체 URL이 `2026-06-24`로 묶여 있어 재크롤링 신호가 없었습니다. 본문이 실제로 바뀐 URL만 갱신하는 방식으로 정리했습니다.
+
+다음 점검 때 확인할 것
+
+- 미색인 23건이 줄었는지, 특히 "발견됨 - 현재 색인이 생성되지 않음" 18건의 추이
+- `financial-income`은 노출 38회로 최다인데 CTR 0%입니다. 평균 게재순위가 8위대이므로 순위보다 제목·설명과 본문 깊이를 점검할 구간입니다.
+- 검색어 중 "금융소득 피부양자"가 평균 9.7위로 가장 높습니다. 이 주제를 다루는 글이 `financial-income`, `dependent/financial-income-dependent-risk`, `income/financial-income-over-10m-health-insurance` 셋으로 나뉘어 있어 서로 잠식하지 않는지 확인이 필요합니다.
+- "지역건강보험료 계산기", "퇴직 후 건강보험료 계산" 등 계산기 의도 검색어는 60~79위로 낮습니다. 계산기 자체를 설명하는 페이지가 홈 외에 없다는 점이 원인일 수 있습니다.
 
 ## 제출 메모
 

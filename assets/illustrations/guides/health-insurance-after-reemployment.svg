@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">퇴사 후 재취업하면 건강보험은 어떻게 바뀔까요?</title>
+  <desc id="desc">지역가입자에서 직장가입자로 자격이 다시 바뀌는 흐름을 보여주는 정보형 일러스트</desc>
+  <rect width="1200" height="630" fill="#f7fbff"/>
+  <rect x="70" y="70" width="1060" height="490" rx="28" fill="#ffffff" stroke="#d8e2ef" stroke-width="4"/>
+  <rect x="130" y="180" width="270" height="240" rx="26" fill="#f2f8ff" stroke="#cfe0f3" stroke-width="4"/>
+  <rect x="130" y="180" width="270" height="76" rx="26" fill="#275f90"/>
+  <path d="M130 232h270" stroke="#275f90" stroke-width="48"/>
+  <text x="265" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">공백 기간</text>
+  <text x="265" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#123b5d">지역가입</text>
+  <text x="265" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#47657f">소득·재산 반영</text>
+  <path d="M440 300h130" stroke="#9eb2c7" stroke-width="14" stroke-linecap="round"/>
+  <path d="M552 268l42 32-42 32" fill="none" stroke="#9eb2c7" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="505" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#47657f">재취업</text>
+  <rect x="620" y="180" width="270" height="240" rx="26" fill="#dff3ee" stroke="#b6e0d4" stroke-width="4"/>
+  <rect x="620" y="180" width="270" height="76" rx="26" fill="#167761"/>
+  <path d="M620 232h270" stroke="#167761" stroke-width="48"/>
+  <text x="755" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">입사일 이후</text>
+  <text x="755" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#123b5d">직장가입</text>
+  <text x="755" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#47657f">보수월액 기준</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="930" y="180" width="140" height="110" rx="20" fill="#fff1d9"/>
+    <text x="1000" y="228" text-anchor="middle" font-size="26" font-weight="700" fill="#9a6500">중복 고지</text>
+    <text x="1000" y="262" text-anchor="middle" font-size="24" fill="#9a6500">확인</text>
+    <rect x="930" y="310" width="140" height="110" rx="20" fill="#fde4df"/>
+    <text x="1000" y="358" text-anchor="middle" font-size="26" font-weight="700" fill="#a94432">임의계속</text>
+    <text x="1000" y="392" text-anchor="middle" font-size="24" fill="#a94432">종료 여부</text>
+  </g>
+  <text x="600" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#123b5d">재취업 후 자격 전환과 고지 확인 순서</text>
+</svg>
