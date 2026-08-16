@@ -9,122 +9,104 @@
 
 ## 순서를 정한 기준
 
-1. **이번 수정으로 URL이 바뀌거나 새로 생긴 주소** — 재수집하지 않으면 변경이 반영되지 않습니다.
-2. **내부 링크가 처음 연결된 글** — 그동안 크롤러가 도달할 경로 자체가 없었습니다.
-3. **3개월간 노출 0인 글** — 색인되지 않았을 가능성이 높은 구간입니다. 58개 중 37개가 여기 해당합니다.
-4. **이미 노출이 나오는 페이지** — 색인은 되어 있으므로 마지막입니다.
+미색인 URL은 추정하지 않고 Search Console의 실제 목록을 그대로 사용했습니다.
+그 위에 아래 순서를 얹었습니다.
 
-노출 0 구간은 카테고리별로 뭉쳐 있습니다. `guides/` 허브와 그 아래 글 6개, `cases/` 5개,
-`checklists/` 6개가 전부 노출 0입니다. "발견됨 - 현재 색인이 생성되지 않음 18건"과 거의 일치하므로,
-이 세 카테고리를 허브부터 순서대로 밀어 넣는 것이 이번 색인 요청의 핵심입니다.
+1. **새로 생겼거나 주소가 바뀐 페이지** — 재수집하지 않으면 존재 자체가 반영되지 않습니다.
+2. **링크를 새로 내보내는 페이지** — 이 페이지가 먼저 크롤링되어야 오늘 추가한
+   내부 링크가 발견됩니다. 대상 글보다 먼저 넣는 이유입니다.
+3. **목록이 바뀐 카테고리 허브**
+4. **미색인 글 본체** — `cases`가 5개 전부 미색인이라 가장 앞에 둡니다.
 
-## 1일차: 이번 변경분 (11건)
+정책 페이지(`contact`, `privacy`, `disclaimer`)와 `/index.html`은 요청 대상에서 뺍니다.
+사유는 아래 "제출하지 않는 주소"에 적었습니다.
 
-`naver-index-urls-today.txt`에 그대로 담겨 있습니다. 가장 먼저 제출하세요.
+## 오늘 제출할 주소 (2026-08-16 작업분, 33건)
+
+`naver-index-urls-today.txt`에 아래 순서 그대로 담겨 있습니다.
+색인 요청은 위에서부터 순서대로 넣으면 됩니다.
+
+순서를 이렇게 잡은 이유는, 링크를 내보내는 페이지를 먼저 크롤링시켜야
+Google이 오늘 추가한 내부 링크를 발견하기 때문입니다.
+
+### 1. 신규 또는 주소가 바뀐 페이지 (2건)
 
 ```text
-https://geonbocalc.com/voluntary-continuation-premium
 https://geonbocalc.com/editorial-policy
+https://geonbocalc.com/voluntary-continuation-premium
+```
+
+`editorial-policy`는 오늘 새로 만든 페이지이고, `voluntary-continuation-premium`은
+URL 충돌을 풀면서 주소가 바뀐 글입니다. 구 주소 `/voluntary-continuation`은 카테고리
+허브로 301되므로 제출하지 않습니다.
+
+### 2. 링크를 새로 내보내는 페이지 (7건)
+
+```text
+https://geonbocalc.com/
+https://geonbocalc.com/local-subscriber-health-insurance
+https://geonbocalc.com/resignation-health-insurance-checklist
+https://geonbocalc.com/four-insurance-after-resignation
+https://geonbocalc.com/retiree-guide
+https://geonbocalc.com/dependent-eligibility
+https://geonbocalc.com/financial-income
+```
+
+이 7개 페이지에 미색인 글로 향하는 문맥 링크를 추가했습니다. 이 페이지들이 먼저
+크롤링되어야 아래 4~5번 글로 가는 경로가 인식됩니다.
+
+### 3. 목록이 바뀐 허브와 글 (4건)
+
+```text
 https://geonbocalc.com/guides/
 https://geonbocalc.com/dependent/
 https://geonbocalc.com/local-subscriber/
 https://geonbocalc.com/guides/health-insurance-after-reemployment
-https://geonbocalc.com/dependent/dependent-application-timing-after-resignation
-https://geonbocalc.com/local-subscriber/income-decrease-adjustment-after-resignation
-https://geonbocalc.com/
-https://geonbocalc.com/guides/dependent-premium-relief-ends-2026
-https://geonbocalc.com/financial-income
 ```
 
-- `voluntary-continuation-premium`은 URL 충돌을 풀면서 새로 생긴 주소입니다. 구 주소 `/voluntary-continuation`은 카테고리 허브로 301되므로 따로 제출하지 않습니다.
-- `editorial-policy`는 신규 페이지입니다.
-- 허브 3곳은 목록에 글이 추가되어 내용이 바뀌었습니다.
-- 그다음 3건은 이번에 내부 링크가 처음 연결된 글입니다. 특히 `health-insurance-after-reemployment`는 노출 22회로 사이트 3위인데 링크가 0건이었습니다.
-
-## 2일차: guides 카테고리 (6건)
-
-허브를 1일차에 넣었으므로 이어서 본문 글을 넣습니다. 전부 노출 0입니다.
+### 4. 사례 5건 — 최우선 색인 대상
 
 ```text
-https://geonbocalc.com/guides/why-health-premium-rises-after-resignation
-https://geonbocalc.com/guides/when-local-subscriber-starts-after-resignation
-https://geonbocalc.com/guides/unemployed-health-insurance-check-order
-https://geonbocalc.com/guides/dependent-registration-after-resignation
-https://geonbocalc.com/guides/questions-before-calling-nhis
-https://geonbocalc.com/retiree-guide
-```
-
-## 3일차: 지역가입자와 피부양자 (10건)
-
-```text
-https://geonbocalc.com/local-subscriber/income-used-for-local-health-premium
-https://geonbocalc.com/local-subscriber/local-premium-without-income
-https://geonbocalc.com/local-subscriber/rent-deposit-local-health-premium
-https://geonbocalc.com/local-subscriber/property-tax-base-health-premium
-https://geonbocalc.com/local-subscriber/housing-debt-deduction-health-premium
-https://geonbocalc.com/dependent/parents-dependent-eligibility
-https://geonbocalc.com/dependent/business-registration-dependent-risk
-https://geonbocalc.com/dependent-eligibility
-https://geonbocalc.com/local-subscriber-health-insurance
-https://geonbocalc.com/four-insurance-after-resignation
-```
-
-## 4일차: 임의계속과 소득별 (7건)
-
-```text
-https://geonbocalc.com/voluntary-continuation/
-https://geonbocalc.com/voluntary-continuation/before-voluntary-continuation-application
-https://geonbocalc.com/voluntary-continuation/when-voluntary-continuation-is-better
-https://geonbocalc.com/voluntary-continuation/when-local-can-be-better-than-continuation
-https://geonbocalc.com/voluntary-continuation/paystub-items-for-voluntary-continuation
-https://geonbocalc.com/income/freelancer-health-premium-after-resignation
-https://geonbocalc.com/income/severance-pay-health-insurance
-```
-
-## 5일차: 체크리스트 (8건)
-
-허브를 포함해 `checklists/` 아래 7건이 전부 노출 0입니다. 루트의 체크리스트 페이지를 함께 넣습니다.
-
-```text
-https://geonbocalc.com/checklists/
-https://geonbocalc.com/checklists/before-resignation-health-checklist
-https://geonbocalc.com/checklists/dependent-documents-checklist
-https://geonbocalc.com/checklists/voluntary-continuation-checklist
-https://geonbocalc.com/checklists/local-subscriber-documents-checklist
-https://geonbocalc.com/checklists/30-day-after-resignation-checklist
-https://geonbocalc.com/checklists/90-day-after-resignation-checklist
-https://geonbocalc.com/resignation-health-insurance-checklist
-```
-
-## 6일차: 사례 (6건)
-
-허브 포함 6건 전부 노출 0입니다.
-
-```text
-https://geonbocalc.com/cases/
 https://geonbocalc.com/cases/case-120k-before-after
 https://geonbocalc.com/cases/case-spouse-dependent-before-after
+https://geonbocalc.com/cases/case-voluntary-continuation-better
 https://geonbocalc.com/cases/case-rent-deposit-unemployed
 https://geonbocalc.com/cases/case-freelancer-after-resignation
-https://geonbocalc.com/cases/case-voluntary-continuation-better
 ```
 
-## 7일차: 이미 노출이 있는 페이지와 보조 페이지 (10건)
+`cases`는 5개 글이 전부 미색인인 유일한 카테고리입니다. 오늘
+`four-insurance-after-resignation`과 홈에서 링크를 연결했습니다.
 
-색인이 되어 있을 가능성이 높으므로 마지막입니다.
+### 5. 링크를 새로 받게 된 나머지 미색인 글 (15건)
 
 ```text
-https://geonbocalc.com/income/
-https://geonbocalc.com/income/financial-income-over-10m-health-insurance
-https://geonbocalc.com/income/pension-income-health-insurance
-https://geonbocalc.com/dependent/spouse-dependent-eligibility-check
-https://geonbocalc.com/dependent/financial-income-dependent-risk
-https://geonbocalc.com/data-sources
-https://geonbocalc.com/about
-https://geonbocalc.com/contact
-https://geonbocalc.com/privacy
-https://geonbocalc.com/disclaimer
+https://geonbocalc.com/guides/unemployed-health-insurance-check-order
+https://geonbocalc.com/guides/dependent-registration-after-resignation
+https://geonbocalc.com/guides/when-local-subscriber-starts-after-resignation
+https://geonbocalc.com/guides/dependent-premium-relief-ends-2026
+https://geonbocalc.com/local-subscriber/income-used-for-local-health-premium
+https://geonbocalc.com/local-subscriber/property-tax-base-health-premium
+https://geonbocalc.com/local-subscriber/rent-deposit-local-health-premium
+https://geonbocalc.com/local-subscriber/housing-debt-deduction-health-premium
+https://geonbocalc.com/local-subscriber/income-decrease-adjustment-after-resignation
+https://geonbocalc.com/dependent/dependent-application-timing-after-resignation
+https://geonbocalc.com/checklists/30-day-after-resignation-checklist
+https://geonbocalc.com/checklists/90-day-after-resignation-checklist
+https://geonbocalc.com/voluntary-continuation/before-voluntary-continuation-application
+https://geonbocalc.com/voluntary-continuation/when-local-can-be-better-than-continuation
+https://geonbocalc.com/income/freelancer-health-premium-after-resignation
 ```
+
+이 목록에 Search Console의 미색인 콘텐츠 글 19개가 모두 포함됩니다.
+
+### 제출하지 않는 주소
+
+- `https://geonbocalc.com/index.html` — 리디렉션 항목으로 잡혀 있지만 301이 정상 동작입니다.
+  유효성 검사를 다시 돌려도 계속 실패로 남습니다. 무시합니다.
+- `/contact`, `/privacy`, `/disclaimer` — 미색인이지만 유입 링크가 20건 이상입니다.
+  링크 문제가 아니라 정보 가치가 낮아 색인되지 않는 유형이라 요청 대상에서 뺍니다.
+- 푸터 링크만 바뀐 나머지 39개 페이지 — 본문이 그대로라 재크롤링 우선순위가 낮습니다.
+  sitemap 재제출로 충분합니다.
 
 ## 참고: 노출이 나오고 있는 페이지 (2026-08-16 기준)
 
