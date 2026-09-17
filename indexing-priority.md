@@ -282,3 +282,39 @@ Search Console에서 실제 URL 목록을 확인한 결과, 1차 점검의 추�
   설명 문구("글이 독자의 질문에 충분히 답하는지는 자동 검사만으로 판단하기 어렵습니다")를
   보면 이 카테고리는 사람이 직접 확인하고 넘어가야 하는 상시 체크 항목으로 보이며, FAQ·근거·
   작성자·날짜를 이미 반영한 상태입니다.
+
+## 2026-09-17 5차: 오늘 반영분 색인 요청 목록
+
+오늘 진행한 콘텐츠 보강 + SEO 진단 반영 작업(financial-income, 홈, 카테고리 허브 7개,
+retiree-guide, 체크리스트, 피부양자 체크, 정보성 문서 2건, about)이 전부 배포 완료된
+상태에서, 실제로 내용이 바뀐 URL만 골라 재수집 요청 목록으로 정리했습니다.
+`naver-index-urls-today.txt`에 아래 순서 그대로 담겨 있습니다.
+
+```text
+https://geonbocalc.com/
+https://geonbocalc.com/guides/
+https://geonbocalc.com/local-subscriber/
+https://geonbocalc.com/voluntary-continuation/
+https://geonbocalc.com/dependent/
+https://geonbocalc.com/income/
+https://geonbocalc.com/cases/
+https://geonbocalc.com/checklists/
+https://geonbocalc.com/about
+https://geonbocalc.com/retiree-guide
+https://geonbocalc.com/financial-income
+https://geonbocalc.com/dependent-eligibility
+https://geonbocalc.com/resignation-health-insurance-checklist
+https://geonbocalc.com/guides/health-insurance-after-reemployment
+https://geonbocalc.com/guides/why-health-premium-rises-after-resignation
+https://geonbocalc.com/local-subscriber/income-decrease-adjustment-after-resignation
+https://geonbocalc.com/dependent/dependent-application-timing-after-resignation
+```
+
+홈과 카테고리 허브 8개를 앞에 둔 이유는 이전과 동일합니다 — 이 페이지들이 먼저
+재크롤링되어야 그 안에 걸린 내부 링크와 갱신된 본문이 검색엔진에 반영됩니다.
+
+제출 순서:
+1. Google Search Console: `sitemap.xml` 재제출 → 위 목록을 URL 검사 도구에서 순서대로
+   "색인 생성 요청"
+2. 네이버 서치어드바이저: 수동 웹페이지 수집 요청에 위 목록을 순서대로 제출 (하루 요청
+   한도가 있으므로 전부 못 넣으면 상위 8개 허브부터)
