@@ -4,6 +4,11 @@ const PROPERTY_POINT_VALUE = 211.5;
 const PROPERTY_DEDUCTION = 100000000;
 const LOCAL_MIN_HEALTH_PREMIUM = 20160;
 const LOW_INCOME_THRESHOLD = 3360000;
+const FINANCIAL_INCOME_PREMIUM_THRESHOLD = 10000000;
+const DEPENDENT_TOTAL_INCOME_LIMIT = 20000000;
+const DEPENDENT_PROPERTY_HARD_LIMIT = 540000000;
+const DEPENDENT_PROPERTY_MID_LIMIT = 360000000;
+const DEPENDENT_BUSINESS_INCOME_LIMIT = 5000000;
 
 const PROPERTY_GRADES = [
   [4500000, 22],
@@ -95,15 +100,21 @@ function propertyPoints(value) {
 }
 
 function estimateLocalPremium(data) {
+  const financialIncomeForPremium =
+    data.financialIncome > FINANCIAL_INCOME_PREMIUM_THRESHOLD ? data.financialIncome : 0;
+
   const incomeBase =
     data.businessIncome +
-    data.financialIncome +
+    financialIncomeForPremium +
     data.otherIncome +
     data.pensionIncome * 0.5;
 
   const rentAssessment = data.deposit * 0.3 + data.monthlyRent * 40 * 0.3;
   const propertyAfterDeduction = Math.max(0, data.propertyBase + rentAssessment - PROPERTY_DEDUCTION);
-  const debtDeduction = Math.min(propertyAfterDeduction, data.housingDebt * 0.6);
+  const debtDeductionEligible = data.housingDebtEligible === "yes";
+  const debtDeduction = debtDeductionEligible
+    ? Math.min(propertyAfterDeduction, data.housingDebt * 0.6)
+    : 0;
   const adjustedPropertyBase = Math.max(0, propertyAfterDeduction - debtDeduction);
   const propertyPoint = propertyPoints(adjustedPropertyBase);
   const monthlyIncomePremium =
@@ -116,9 +127,11 @@ function estimateLocalPremium(data) {
 
   return {
     incomeBase,
+    financialIncomeForPremium,
     propertyAfterDeduction,
     adjustedPropertyBase,
     debtDeduction,
+    debtDeductionEligible,
     propertyPoint,
     monthlyIncomePremium,
     monthlyPropertyPremium,
@@ -156,20 +169,36 @@ function judgeDependent(data) {
     return { label: "어려움", reason: "등록 가능한 직장가입자 가족이 없다고 선택했습니다." };
   }
 
-  if (data.businessIncome > 0) {
-    return { label: "확인 필요", reason: "사업소득 또는 프리랜서 소득이 있으면 피부양자 인정이 까다로울 수 있습니다." };
+  if (data.bizRegistered === "yes" && data.businessIncome > 0) {
+    return { label: "어려움", reason: "사업자등록이 있고 사업소득이 발생하면 금액과 관계없이 피부양자에서 제외되는 것이 일반적입니다." };
   }
 
-  if (totalIncome > 20000000) {
+  if (data.businessIncome > DEPENDENT_BUSINESS_INCOME_LIMIT) {
+    return { label: "어려움", reason: "사업자등록이 없어도 사업소득이 연 500만원을 초과하면 피부양자 자격 유지가 어려울 수 있습니다." };
+  }
+
+  if (data.businessIncome > 0 && data.bizRegistered === "unknown") {
+    return { label: "확인 필요", reason: "사업자등록 여부에 따라 소액 사업소득이라도 피부양자 판단이 달라질 수 있습니다." };
+  }
+
+  if (data.propertyBase > DEPENDENT_PROPERTY_HARD_LIMIT) {
+    return { label: "어려움", reason: "재산 과세표준 합계가 5억 4천만원을 초과하면 소득과 무관하게 피부양자에서 제외됩니다." };
+  }
+
+  if (totalIncome > DEPENDENT_TOTAL_INCOME_LIMIT) {
     return { label: "어려움", reason: "연간 합산 소득이 2,000만원을 초과하면 피부양자 자격 유지가 어려울 수 있습니다." };
   }
 
-  if (data.financialIncome >= 10000000) {
-    return { label: "확인 필요", reason: "금융소득이 1,000만원 이상이면 합산 반영 여부를 확인해야 합니다." };
+  if (data.propertyBase > DEPENDENT_PROPERTY_MID_LIMIT && totalIncome > 10000000) {
+    return { label: "어려움", reason: "재산 과세표준이 3억 6천만원을 초과하면서 연간 소득이 1,000만원을 초과하면 피부양자에서 제외될 수 있습니다." };
   }
 
-  if (data.familyOption === "unknown") {
-    return { label: "확인 필요", reason: "직장가입자 가족에게 등록 가능한 가족관계인지 먼저 확인하세요." };
+  if (data.financialIncome >= 10000000) {
+    return { label: "확인 필요", reason: "금융소득이 1,000만원 이상이면 연간 합산 소득 2,000만원 기준에 포함되는지 다시 확인해야 합니다." };
+  }
+
+  if (data.familyOption === "unknown" || data.bizRegistered === "unknown") {
+    return { label: "확인 필요", reason: "가족관계, 사업자등록 여부 등 판단에 필요한 정보가 아직 부족합니다." };
   }
 
   return { label: "가능성 있음", reason: "입력값 기준으로는 피부양자 등록 가능성을 먼저 확인해볼 만합니다." };
@@ -243,7 +272,9 @@ function render() {
     deposit: valueOf("#deposit"),
     monthlyRent: valueOf("#monthlyRent"),
     housingDebt: valueOf("#housingDebt"),
-    familyOption: document.querySelector("#familyOption").value
+    housingDebtEligible: document.querySelector("#housingDebtEligible").value,
+    familyOption: document.querySelector("#familyOption").value,
+    bizRegistered: document.querySelector("#bizRegistered").value
   };
 
   const local = estimateLocalPremium(data);
@@ -266,7 +297,8 @@ function render() {
     <p>지역가입자 계산 반영 소득: <strong>${formatWon(local.incomeBase)}</strong></p>
     <p>지역가입자 소득보험료 추정: <strong>${formatWon(local.monthlyIncomePremium)}</strong></p>
     <p>기본 공제 후 재산 반영액: <strong>${formatWon(local.propertyAfterDeduction)}</strong></p>
-    <p>주택 관련 대출 참고 공제: <strong>${formatWon(local.debtDeduction)}</strong></p>
+    <p>주택 관련 대출 참고 공제: <strong>${formatWon(local.debtDeduction)}</strong>${local.debtDeductionEligible ? "" : " (공제 미적용 추정 — 요건 충족 여부를 선택하지 않았거나 대상이 아님)"}</p>
+    <p>지역보험료에 반영된 금융소득: <strong>${formatWon(local.financialIncomeForPremium)}</strong> (연 1,000만원 이하면 미반영)</p>
     <p>최종 재산 반영 참고액: <strong>${formatWon(local.adjustedPropertyBase)}</strong></p>
     <p>재산보험료 부과점수: <strong>${local.propertyPoint.toLocaleString("ko-KR")}점</strong></p>
     <p>지역가입자 재산보험료 추정: <strong>${formatWon(local.monthlyPropertyPremium)}</strong></p>

@@ -250,6 +250,15 @@
             <input type="number" id="businessIncome" min="0" step="100000" value="0">
           </label>
           <label>
+            사업자등록 여부
+            <span class="hint">등록된 사업자는 소득 금액과 무관하게 피부양자 판단이 달라질 수 있습니다.</span>
+            <select id="bizRegistered">
+              <option value="no">사업자등록 없음(프리랜서 포함)</option>
+              <option value="unknown">잘 모르겠음</option>
+              <option value="yes">사업자등록 있음</option>
+            </select>
+          </label>
+          <label>
             이자·배당 등 금융소득
             <span class="hint">피부양자 판단에서는 금융소득 규모가 중요합니다.</span>
             <input type="number" id="financialIncome" min="0" step="100000" value="0">
@@ -287,6 +296,15 @@
             주택 관련 대출 잔액
             <span class="hint">공제 대상인지 확실하지 않다면 참고용으로만 입력하세요.</span>
             <input type="number" id="housingDebt" min="0" step="1000000" value="0">
+          </label>
+          <label>
+            주택금융부채 공제 요건 충족 여부
+            <span class="hint">공제는 무조건 적용되지 않으며, 주택 소유·임차 형태와 대출 종류별 요건을 충족해야 합니다.</span>
+            <select id="housingDebtEligible">
+              <option value="unknown">잘 모르겠음(공제 미적용으로 추정)</option>
+              <option value="no">요건 충족 안 함/해당 없음</option>
+              <option value="yes">요건 충족함(공단 확인 완료)</option>
+            </select>
           </label>
           <label>
             가족 피부양자 등록 가능성
