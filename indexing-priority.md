@@ -115,16 +115,16 @@ https://geonbocalc.com/income/freelancer-health-premium-after-resignation
 | URL | 노출 | 평균 순위 | 메모 |
 | --- | --- | --- | --- |
 | /financial-income | 38 | 8.4 | 2026-09-17 보강: 제목·설명에 1,000만원/2,000만원 기준선을 명시하고, 두 기준선을 구분하는 표와 FAQ를 본문에 추가. CTR 변화는 다음 점검에서 확인 |
-| / | 26 | 17.5 | 계산기 의도 검색어에서 순위가 낮음 |
-| /guides/health-insurance-after-reemployment | 22 | 19.6 | 이번에 링크가 처음 연결됨 |
-| /voluntary-continuation/ | 14 | 5.7 | 사이트 최고 순위, 클릭 1건 |
-| /income/ | 10 | 12.5 | |
-| /retiree-guide | 8 | 33.1 | |
-| /dependent/ | 6 | 10.5 | |
-| /local-subscriber/ | 5 | 4.0 | |
+| / | 26 | 17.5 | 2026-09-17 보강: 계산기 의도 검색어("지역가입자 건강보험료 계산기" 등)에 답하는 FAQ 추가 |
+| /guides/health-insurance-after-reemployment | 22 | 19.6 | 2026-09-17 보강: FAQ 3건 추가 |
+| /voluntary-continuation/ | 14 | 5.7 | 2026-09-17 보강: 제목·설명에 신청 기한(2개월)·유지 기간(36개월) 명시, 기준 표 추가 |
+| /income/ | 10 | 12.5 | 2026-09-17 보강: 소득 종류별 기준 표(금융소득 1,000만/2,000만원, 연금 50%) 추가 |
+| /retiree-guide | 8 | 33.1 | 2026-09-17 보강: 세 경로 핵심 숫자 표 추가 |
+| /dependent/ | 6 | 10.5 | 2026-09-17 보강: 제목·설명에 소득요건 2,000만원 명시, 기준 표 추가 |
+| /local-subscriber/ | 5 | 4.0 | 2026-09-17 보강: 제목·설명에 보증금 30%·재산공제 1억원 명시, 기준 표 추가 |
 | /data-sources | 5 | 6.0 | |
-| /resignation-health-insurance-checklist | 5 | 8.6 | |
-| /dependent-eligibility | 5 | 10.4 | |
+| /resignation-health-insurance-checklist | 5 | 8.6 | 2026-09-17 보강: FAQ 2건 추가 |
+| /dependent-eligibility | 5 | 10.4 | 2026-09-17 보강: FAQ 답변에 2,000만원 기준 명시 |
 | /voluntary-continuation-premium | 5 | 51.0 | 구 주소 기준. URL 충돌 해소 후 재측정 필요 |
 | /local-subscriber-health-insurance | 4 | 11.3 | 클릭 1건 |
 | /income/financial-income-over-10m-health-insurance | 3 | 2.0 | 사이트 최고 순위 |
