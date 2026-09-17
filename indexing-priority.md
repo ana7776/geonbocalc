@@ -114,7 +114,7 @@ https://geonbocalc.com/income/freelancer-health-premium-after-resignation
 
 | URL | 노출 | 평균 순위 | 메모 |
 | --- | --- | --- | --- |
-| /financial-income | 38 | 8.4 | 노출 1위인데 CTR 0%. 1페이지권이므로 제목·설명과 본문 깊이 점검 대상 |
+| /financial-income | 38 | 8.4 | 2026-09-17 보강: 제목·설명에 1,000만원/2,000만원 기준선을 명시하고, 두 기준선을 구분하는 표와 FAQ를 본문에 추가. CTR 변화는 다음 점검에서 확인 |
 | / | 26 | 17.5 | 계산기 의도 검색어에서 순위가 낮음 |
 | /guides/health-insurance-after-reemployment | 22 | 19.6 | 이번에 링크가 처음 연결됨 |
 | /voluntary-continuation/ | 14 | 5.7 | 사이트 최고 순위, 클릭 1건 |
